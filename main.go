@@ -25,7 +25,7 @@ func main() {
 	}
 }
 
-func helloHandler(w http.ResponseWriter, r *http.Request) {
+func helloHandler(w http.ResponseWriter, _ *http.Request) {
 	_, err := w.Write([]byte("Hello, Handler!\n"))
 	if err != nil {
 		log.Error().Msgf("Failed to write response: %v", err)
